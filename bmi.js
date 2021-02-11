@@ -51,17 +51,20 @@ $(document).ready(function () {
 
 
     function calculateBMI() {
-        // Change the text of the <p> with ID of "message" to
-        // state, for example, "You have registered Jane for grade 6 camp!"
-        // Use the name and grade the user provided in the form.
 
+        // Ask user for height in inches
         let yourHeight = parseFloat($("input#height").val());
 
+        //Ask User for weight
         let yourWeight = parseFloat($("input#weight").val());
 
+        //Calculate BMI using the formula
         let bmiValue = yourWeight/ (yourHeight * yourHeight) * 703;
 
+        // Store the values in the value
         let value = "";
+
+        //check for category based on bmi value results
 
         if(bmiValue < 15 )
         {
@@ -96,6 +99,7 @@ $(document).ready(function () {
             value = "Obese Class III (Very severely obese)";
         }
 
+        //Print the output in the paragraph ith #message
         $("p#message").text(`Your BMI is ${bmiValue.toFixed(1)} and you are ${value}`)
 
     }
