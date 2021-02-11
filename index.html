@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+<div class="container">
+    <h1>Body Mass Index Calculator</h1>
+
+
+
+    <fieldset>
+        <legend>Enter Height(inches) and Weight(lbs)</legend>
+
+        <form>
+
+            <div class="form-group">
+                <label for="height"> Enter Height (59 - 79 inches)</label>
+                <input name="height" id="height" type="number" min="59" max="79" step="0.01"
+                       class="form-control">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Enter Weight(88 - 353 pounds) </label>
+                <input name="weight" id="weight" type="number" min="88" max="353" step="0.01"
+                       class="form-control">
+            </div>
+
+            <button type ="submit" class="btn btn-primary">Calculate</button>
+
+
+        </form>
+    </fieldset>
+    <br>
+    <p id="message"></p>
+</div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+<script src="bmi.js"></script>
+
+</html>
